@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1805754,
+        "name": "Jinan",
+        "country": "CN",
+        "coord": {
+        "lon": 103.596832,
+        "lat": 32.639408
+        }
+    },
+    {
+        "id": 2038349,
+        "name": "Beijing Shi",
+        "country": "CN",
+        "coord": {
+        "lon": 116.397057,
+        "lat": 39.916908
+        }
+    },
+    {
+        "id": 2147714,
+        "name": "Sydney",
+        "country": "AU",
+        "coord": {
+        "lon": 151.207321,
+        "lat": -33.867851
+        }
+    },
+    {
+        "id": 7839805,
+        "name": "Melbourne",
+        "country": "AU",
+        "coord": {
+        "lon": 144.944214,
+        "lat": -37.813061
+        }
+    },
+    {
+        "id": 2643743,
+        "name": "London",
+        "country": "GB",
+        "coord": {
+        "lon": -0.12574,
+        "lat": 51.50853
+        }
+    },
+    {
+        "id": 5368361,
+        "name": "Los Angeles",
+        "country": "US",
+        "coord": {
+        "lon": -118.243683,
+        "lat": 34.052231
+        }
+    }
+]

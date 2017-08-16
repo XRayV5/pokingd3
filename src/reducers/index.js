@@ -1,10 +1,15 @@
 import { combineReducers } from "redux"
 import * as types from "../actions/types"
+// import cities from "../meta/cities.json"
 
-const weatherReducer = (state = {}, { type, payload }) => {
+const CITY = ['Jinan', 'Beijing', 'Melbourne', 'Sydney', 'Los Angles', 'London']
+
+const weatherReducer = (state = { cities: [], data: {} }, { type, payload }) => {
     switch (type) {
-        case types.FETCH_ALL_WEATHER:
-            return { ...payload}
+        case types.FETCH_WEATHER_API:
+            return { ...state, data: {...payload} }
+        case types.IMPORT_CITY:
+            return { ...state, cities: [...payload]}
         default:
             return state
     }
