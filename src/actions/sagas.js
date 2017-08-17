@@ -10,9 +10,7 @@ const getIds = (cities) => cities.map((city) => city.id)
 function* _fetchWeatherData() {
     while(true) {
         yield take(types.FETCH_ALL_WEATHER)
-        console.log("Saga!!!")
         const cities = yield select(getCities)
-        console.log(cities)
         const res = yield call(fetchFromOpenWeather, getIds(cities))
         console.log(res)
         const resolved = yield res
@@ -23,7 +21,6 @@ function* _fetchWeatherData() {
 function* importCities() {
     try{
         const cities = require('../meta/cities.json')
-        console.log(cities)
         yield put({
             type: types.IMPORT_CITY,
             payload: cities
