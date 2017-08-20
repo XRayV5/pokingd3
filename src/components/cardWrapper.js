@@ -16,20 +16,31 @@ class CardWrapper extends Component {
     render () {
         const { data } = this.props.weatherData
         if(data.length === 0) return null
-        const cards = data.map(byCity => <div>{byCity.city.name}</div>)
+        const cards = data.map(byCity => <Card data={byCity} />)
         console.log(cards)
         return (
             <div>
-                <LineChart
-                    data={data[3]}
-                    width={200}
-                    height={200}
-                />
-                {[...cards]}</div>
+                {[...cards]}
+            </div>
         )
     }
 }
 
+
+
 const mapStateToProps = ({ weatherReducer }) => ({ weatherData: weatherReducer })
 
 export default connect(mapStateToProps, { ...actions })(CardWrapper)
+
+const Card = (props) => (
+        <div>
+            <div>{props.data.city.name}</div>
+            <div>
+                <LineChart
+                    data={props.data}
+                    width={200}
+                    height={200}
+                />
+            </div>
+        </div>
+)
